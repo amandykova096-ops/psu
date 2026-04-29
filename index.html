@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aiturgan Amandykova</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:#FAFAF8;
+    --ink:#1a1a18;
+    --muted:#6b6b65;
+    --line:#e0dfd8;
+    --accent:#0F6E56;
+    --accent-light:#E1F5EE;
+    --tag-bg:#F1EFE8;
+    --tag-ink:#2C2C2A;
+  }
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+
+  /* NAV */
+  nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 3rem;border-bottom:0.5px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:100}
+  .nav-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;letter-spacing:0.01em}
+  .nav-links{display:flex;gap:2rem}
+  .nav-links a{font-size:0.85rem;text-decoration:none;color:var(--muted);letter-spacing:0.04em;text-transform:uppercase;font-weight:400;transition:color 0.2s}
+  .nav-links a:hover{color:var(--ink)}
+
+  /* HERO */
+  .hero{display:grid;grid-template-columns:1fr 340px;gap:4rem;padding:5rem 3rem 4rem;border-bottom:0.5px solid var(--line);align-items:end}
+  .hero-eyebrow{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);font-weight:500;margin-bottom:1.2rem}
+  .hero-title{font-family:'Playfair Display',serif;font-size:3.6rem;font-weight:400;line-height:1.1;margin-bottom:1.5rem}
+  .hero-title em{font-style:italic;color:var(--muted)}
+  .hero-bio{font-size:1rem;color:var(--muted);max-width:480px;line-height:1.8;margin-bottom:2rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .btn{display:inline-block;padding:0.65rem 1.5rem;border-radius:999px;font-size:0.85rem;font-weight:500;text-decoration:none;transition:all 0.2s;cursor:pointer;border:none;font-family:'DM Sans',sans-serif}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:#085041}
+  .btn-outline{background:transparent;color:var(--ink);border:0.5px solid var(--line)}
+  .btn-outline:hover{background:var(--tag-bg)}
+  .hero-aside{border-left:0.5px solid var(--line);padding-left:2.5rem}
+  .hero-aside p{font-size:0.82rem;color:var(--muted);line-height:1.9;margin-bottom:0.3rem}
+  .hero-aside strong{color:var(--ink);font-weight:500}
+
+  /* SECTION WRAPPER */
+  section{padding:4rem 3rem;border-bottom:0.5px solid var(--line)}
+  .section-label{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);font-weight:500;margin-bottom:2.5rem}
+
+  /* SKILLS */
+  .skills-grid{display:flex;flex-wrap:wrap;gap:0.6rem}
+  .skill-tag{background:var(--tag-bg);color:var(--tag-ink);font-size:0.82rem;padding:0.45rem 1rem;border-radius:999px;font-weight:400}
+
+  /* EXPERIENCE */
+  .exp-list{display:flex;flex-direction:column;gap:2.5rem}
+  .exp-item{display:grid;grid-template-columns:220px 1fr;gap:2rem}
+  .exp-date{font-size:0.8rem;color:var(--muted);padding-top:0.2rem;line-height:1.6}
+  .exp-company{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);font-weight:500;margin-bottom:0.3rem}
+  .exp-role{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:400;margin-bottom:0.6rem}
+  .exp-bullets{list-style:none;padding:0}
+  .exp-bullets li{font-size:0.88rem;color:var(--muted);line-height:1.8;padding-left:1rem;position:relative}
+  .exp-bullets li::before{content:'–';position:absolute;left:0;color:var(--line)}
+
+  /* EDUCATION */
+  .edu-card{background:var(--accent-light);border-radius:12px;padding:1.8rem 2rem}
+  .edu-school{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:400;margin-bottom:0.3rem;color:#085041}
+  .edu-degree{font-size:0.88rem;color:#0F6E56;margin-bottom:1rem;font-weight:500}
+  .edu-details{font-size:0.82rem;color:#0F6E56;line-height:1.9}
+
+  /* CONTACT */
+  .contact-row{display:flex;gap:2rem;flex-wrap:wrap;align-items:center}
+  .contact-item{font-size:0.88rem;color:var(--muted)}
+  .contact-item strong{color:var(--ink);display:block;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.2rem;font-weight:500}
+
+  /* FOOTER */
+  footer{padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center}
+  footer p{font-size:0.78rem;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">Aiturgan Amandykova</div>
+  <div class="nav-links">
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div>
+    <div class="hero-eyebrow">Available · Full-time · Houston, TX</div>
+    <h1 class="hero-title">Operator.<br><em>Entrepreneur.</em><br>Creator.</h1>
+    <p class="hero-bio">Motivated and detail-oriented professional with hands-on experience in manufacturing operations, entrepreneurship, and customer-facing roles. Seeking a full-time position in chip manufacturing where technical precision and teamwork drive results.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in touch</button>
+      <button class="btn btn-outline" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">View experience</button>
+    </div>
+  </div>
+  <div class="hero-aside">
+    <p><strong>Location</strong>Houston, Texas, USA</p>
+    <p><strong>Status</strong>F-1 Visa · International Student</p>
+    <p><strong>University</strong>North American University</p>
+    <p><strong>Degree</strong>B.A. Business Administration</p>
+    <p><strong>Expected</strong>May 2028</p>
+    <p><strong>Availability</strong>Full-time</p>
+  </div>
+</div>
+
+<section>
+  <div class="section-label">Key skills</div>
+  <div class="skills-grid">
+    <span class="skill-tag">DTF Machine Operation</span>
+    <span class="skill-tag">Excel & Data Entry</span>
+    <span class="skill-tag">Photography & Photo Editing</span>
+    <span class="skill-tag">Customer Service</span>
+    <span class="skill-tag">Handcrafting & Assembly</span>
+    <span class="skill-tag">Teamwork & Reliability</span>
+    <span class="skill-tag">Entrepreneurship</span>
+    <span class="skill-tag">Product Installation</span>
+    <span class="skill-tag">Vendor Negotiation</span>
+    <span class="skill-tag">Alibaba Sourcing</span>
+    <span class="skill-tag">Finance Coursework</span>
+    <span class="skill-tag">POS Systems</span>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-label">Work experience</div>
+  <div class="exp-list">
+
+    <div class="exp-item">
+      <div class="exp-date">Jan 2025 – Jun 2025</div>
+      <div>
+        <div class="exp-company">T-Shirt Printing Factory · Texas</div>
+        <div class="exp-role">DTF Machine Operator</div>
+        <ul class="exp-bullets">
+          <li>Operated Direct-to-Film printing machines for high-volume custom T-shirt production.</li>
+          <li>Prepared materials, maintained machinery, and ensured accurate, high-quality prints.</li>
+          <li>Collaborated with team to meet production deadlines and resolve technical issues.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">Oct 2024 – Jun 2025</div>
+      <div>
+        <div class="exp-company">Self-Founded Venture</div>
+        <div class="exp-role">Co-founder — Framed Love</div>
+        <ul class="exp-bullets">
+          <li>Created and sold custom photo frames for restaurants across Texas.</li>
+          <li>Handled end-to-end operations: Alibaba sourcing, equipment setup, photo design, and installation.</li>
+          <li>Negotiated with restaurant owners and managed product quality and delivery.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">Sep 2024 – Jun 2025</div>
+      <div>
+        <div class="exp-company">Freelance</div>
+        <div class="exp-role">Photographer</div>
+        <ul class="exp-bullets">
+          <li>Conducted personal and event photo shoots for a range of clients.</li>
+          <li>Edited and delivered high-quality results using professional editing software.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">Aug 2024 – Dec 2024</div>
+      <div>
+        <div class="exp-company">Local Restaurant · Texas</div>
+        <div class="exp-role">Waitress</div>
+        <ul class="exp-bullets">
+          <li>Delivered excellent customer service in a fast-paced restaurant environment.</li>
+          <li>Managed multiple tables, operated POS systems, and ensured customer satisfaction.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="education">
+  <div class="section-label">Education & certifications</div>
+  <div class="edu-card">
+    <div class="edu-school">North American University</div>
+    <div class="edu-degree">B.A. in Business Administration · Aug 2024 – May 2028 (expected)</div>
+    <div class="edu-details">
+      Texas, USA &nbsp;·&nbsp; International student from Kyrgyzstan on F-1 visa<br>
+      Relevant coursework: Marketing · Entrepreneurship · Nonprofit Management<br>
+      Certifications: Finance Programs · Excel Proficiency Training
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-label">Contact</div>
+  <div class="contact-row">
+    <div class="contact-item"><strong>Location</strong>Houston, Texas, USA 77081</div>
+    <div class="contact-item"><strong>Availability</strong>Full-time · Open to opportunities</div>
+    <div class="contact-item"><strong>Visa</strong>F-1 · International student</div>
+  </div>
+</section>
+
+<footer>
+  <p>Aiturgan Amandykova · Houston, TX</p>
+  <p>Built for GitHub Pages</p>
+</footer>
+
+</body>
+</html>
